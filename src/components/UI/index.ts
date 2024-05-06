@@ -1,4 +1,4 @@
 import { Heading, Text } from "./Typography";
-import { FormInput, Button, Dropdown } from "./Interactive Elements";
+import { FormInput, Button, Select } from "./Interactive Elements";
 
-export { Heading, Text, FormInput, Button, Dropdown };
+export { Heading, Text, FormInput, Button, Select };

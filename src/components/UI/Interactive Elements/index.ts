@@ -1,5 +1,5 @@
 import FormInput from "./FormInput/FormInput";
 import Button from "./Button/Button";
-import Dropdown from "./Dropdown/Dropdown";
+import Select from "./Select/Select";
 
-export { FormInput, Button, Dropdown };
+export { FormInput, Button, Select };

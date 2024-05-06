@@ -1,5 +1,8 @@
-import { Button, Dropdown, FormInput, Heading, Text } from "./components/UI";
+import { Button, FormInput, Heading, Text } from "./components/UI";
 import { CiUser } from "react-icons/ci";
+import PlatformSelect from "./components/PlatformSelect/PlatformSelect";
+import TabButton from "./components/TabButton/TabButton";
+import { FaLink } from "react-icons/fa6";
 
 const App = () => {
   return (
@@ -12,24 +15,12 @@ const App = () => {
       </Text>
 
       <FormInput icon={<CiUser size={25} />} placeholder="Text Field Empty" />
-      <Button disabled variant="secondary">
-        Click Me
-      </Button>
-
-      <Dropdown
-        onChange={(v) => {
-          console.log(v);
-        }}
-      >
-        <Dropdown.Button>Click Me</Dropdown.Button>
-        <Dropdown.Items>
-          <Dropdown.Item value={1}>
-            <Text>Option 1</Text>
-          </Dropdown.Item>
-          <Dropdown.Item value={2}>Option 2</Dropdown.Item>
-          <Dropdown.Item value={3}>Option 3</Dropdown.Item>
-        </Dropdown.Items>
-      </Dropdown>
+      <Button variant="primary">Hello World</Button>
+      <PlatformSelect />
+      <TabButton>
+        <FaLink size={25} />
+        <Heading size="s">Tab Button</Heading>
+      </TabButton>
     </div>
   );
 };

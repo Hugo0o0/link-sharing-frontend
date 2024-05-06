@@ -8,7 +8,6 @@ const Heading = styled.h1<HeadingProps>`
   font-size: ${({ size }) => (size === "m" ? "3.2rem" : "1.6rem")};
   font-weight: bold;
   line-height: 150%;
-  color: var(--clr-dark);
 `;
 
 Heading.defaultProps = {

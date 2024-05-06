@@ -1,15 +1,15 @@
-import styles from "./Dropdown.module.css";
+import styles from "./Select.module.css";
 import React, { ButtonHTMLAttributes, FC, forwardRef } from "react";
 import { FaChevronDown } from "react-icons/fa6";
 import { motion } from "framer-motion";
-import useDropdown from "../../../../utils/hooks/useDropdown";
+import useSelect from "../../../../utils/hooks/useSelect";
 
-interface DropdownButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface SelectButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
 }
 
 const AnimatedChevronIcon = motion(
-  forwardRef<HTMLSpanElement>((props, ref) => {
+  forwardRef<HTMLSpanElement>((_, ref) => {
     return (
       <span ref={ref}>
         <FaChevronDown />
@@ -18,8 +18,8 @@ const AnimatedChevronIcon = motion(
   })
 );
 
-const DropdownButton: FC<DropdownButtonProps> = ({ children, ...props }) => {
-  const { toggle, isOpen, item } = useDropdown();
+const SelectButton: FC<SelectButtonProps> = ({ children, ...props }) => {
+  const { toggle, isOpen } = useSelect();
 
   return (
     <button
@@ -27,10 +27,11 @@ const DropdownButton: FC<DropdownButtonProps> = ({ children, ...props }) => {
       onClick={() => {
         toggle();
       }}
-      className={styles["dropdown-button"]}
+      className={styles["select-button"]}
     >
       {children}
       <AnimatedChevronIcon
+        style={{ marginLeft: "auto" }}
         animate={{
           rotate: isOpen ? 180 : 0,
         }}
@@ -39,4 +40,4 @@ const DropdownButton: FC<DropdownButtonProps> = ({ children, ...props }) => {
   );
 };
 
-export default DropdownButton;
+export default SelectButton;
