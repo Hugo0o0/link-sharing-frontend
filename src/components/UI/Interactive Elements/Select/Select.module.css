@@ -15,6 +15,7 @@
   border: 1px solid var(--clr-light-grey);
   position: absolute;
   top: 120%;
+  z-index: 1;
 }
 .select-item:last-child {
   border-bottom: none;

@@ -14,6 +14,7 @@
   border-radius: 12px;
   color: var(--clr-primary);
   background-color: var(--clr-blue-chalk);
+  position: relative;
 }
 .image-upload__button-with-image {
   color: var(--clr-white);

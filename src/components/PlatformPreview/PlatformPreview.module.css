@@ -1,0 +1,62 @@
+.platform-preview {
+  display: flex;
+  padding: 1.6rem;
+  align-items: center;
+  justify-content: space-between;
+  width: 23.7rem;
+  height: 5.6rem;
+  border-radius: 8px;
+  color: white !important;
+}
+
+.platform-preview-github {
+  background-color: #1a1a1a;
+}
+
+.platform-preview-frontendmentor {
+  background-color: var(--clr-white);
+  border: 1px solid var(--clr-light-grey);
+  color: black;
+}
+
+.platform-preview-x {
+  background-color: var(--clr-black);
+}
+
+.platform-preview-instagram {
+  background-color: #f56040;
+}
+
+.platform-preview-linkedin {
+  background-color: #2d68ff;
+}
+.platform-preview-youtube {
+  background-color: #ee3939;
+}
+
+.platform-preview-facebook {
+  background-color: #2442ac;
+}
+
+.platform-preview-twitch {
+  background-color: #ee3fc8;
+}
+
+.platform-preview-devto {
+  background-color: var(--clr-dark);
+}
+.platform-preview-codewars {
+  background-color: #8a1a50;
+}
+.platform-preview-freecodecamp {
+  background-color: #302267;
+}
+.platform-preview-gitlab {
+  background-color: #eb4925;
+}
+.platform-preview-hashnode {
+  background-color: #0330d1;
+}
+.platform-preview-stackoverflow {
+  background-color: #ec7100;
+}
