@@ -14,6 +14,7 @@ import {
 } from "react-icons/fa";
 import { BiLogoDevTo } from "react-icons/bi";
 import { SiCodewars } from "react-icons/si";
+import { Color } from "./@types/types";
 
 export const platforms = [
   {

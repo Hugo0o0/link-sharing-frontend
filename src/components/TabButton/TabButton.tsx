@@ -10,7 +10,6 @@ const TabButton = styled.button<TabButtonProps>`
   display: flex;
   align-items: center;
   gap: 0.8rem;
-  transition: all 0.3s;
   font-size: 1.6rem;
   font-weight: bold;
   line-height: 150%;

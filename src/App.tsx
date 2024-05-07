@@ -3,6 +3,7 @@ import { CiUser } from "react-icons/ci";
 import PlatformSelect from "./components/PlatformSelect/PlatformSelect";
 import TabButton from "./components/TabButton/TabButton";
 import { FaLink } from "react-icons/fa6";
+import ImageUpload from "./components/ImageUpload/ImageUpload";
 
 const App = () => {
   return (
@@ -21,6 +22,11 @@ const App = () => {
         <FaLink size={25} />
         <Heading size="s">Tab Button</Heading>
       </TabButton>
+
+      <ImageUpload
+        image="https://avatars.githubusercontent.com/u/59080216?s=400&u=ea72e1f7ef9f21e8efd42de8cdf9e1540fff9709&v=4"
+        message="Upload your image"
+      />
     </div>
   );
 };
