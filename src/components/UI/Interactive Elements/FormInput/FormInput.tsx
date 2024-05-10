@@ -21,7 +21,11 @@ const FormInput: FC<FormInputProps> = ({ icon, error, ...props }) => {
         }`}
         {...props}
       />
-      <Text size="s" className={styles["input-error"]}>
+      <Text
+        size="s"
+        color={error ? "danger" : "black"}
+        className={styles["input-error"]}
+      >
         {error}
       </Text>
     </div>

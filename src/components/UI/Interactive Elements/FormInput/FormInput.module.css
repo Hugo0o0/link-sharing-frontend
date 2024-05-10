@@ -3,6 +3,7 @@
   align-items: center;
   position: relative;
   transition: all 0.3s;
+  background-color: transparent;
 }
 
 .input {
@@ -18,7 +19,7 @@
 }
 .input-with-error {
   border: 1px solid var(--clr-danger);
-  color: var(--clr-danger);
+  color: var(--clr-danger) !important;
 }
 .input:focus {
   border: 1px solid var(--clr-primary);
@@ -43,4 +44,11 @@
 }
 .input-container-error:hover {
   box-shadow: none;
+}
+
+@media only screen and (max-width: 31.25em) {
+  .input-error {
+    top: 105%;
+    right: auto;
+  }
 }

@@ -26,7 +26,7 @@ const App = () => {
         </Heading>
       </TabButton>
       <ImageUpload message="Upload your image" />
-      <PlatformPreview platform="instagram" />
+      <PlatformPreview platform="youtube" />
     </div>
   );
 };

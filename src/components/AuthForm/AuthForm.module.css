@@ -1,0 +1,81 @@
+.auth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5.1rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  border-radius: 12px;
+  background-color: var(--clr-white);
+  padding: 4rem;
+  min-width: 47.6rem;
+}
+
+.form__header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.form__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.form__input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.form__footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  margin: auto 0;
+}
+
+@media only screen and (max-width: 31.25em) {
+  .auth {
+    gap: 6.4rem;
+    align-items: flex-start;
+  }
+  .form {
+    min-width: 34rem;
+    width: auto;
+    background-color: transparent;
+    padding: 0;
+  }
+  .form__footer {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 31.25em) {
+  .auth {
+    gap: 6.4rem;
+    padding: 3.2rem;
+    align-items: flex-start;
+  }
+  .form {
+    min-width: 34rem;
+    width: auto;
+    background-color: transparent;
+    padding: 0;
+  }
+  .form__footer {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 23.4375em) {
+  .auth {
+  }
+  .form {
+    min-width: auto;
+  }
+}

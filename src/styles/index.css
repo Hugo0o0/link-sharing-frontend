@@ -6,3 +6,15 @@ html {
   font-size: 62.5%;
   font-family: "Instrument Sans", sans-serif;
 }
+
+body {
+  min-height: 100vh;
+  background-color: var(--clr-alabaster);
+}
+
+.center-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
