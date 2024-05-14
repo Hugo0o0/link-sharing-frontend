@@ -14,72 +14,92 @@ import {
 } from "react-icons/fa";
 import { BiLogoDevTo } from "react-icons/bi";
 import { SiCodewars } from "react-icons/si";
+import {
+  PlatformPreview,
+  PlatformSelect,
+  ValidationByPlatform,
+} from "./@types/types";
 
-export const platforms = [
+export const platforms: PlatformSelect[] = [
   {
-    name: "Github",
+    label: "Github",
+    name: "github",
     icon: <PiGithubLogoFill size={20} />,
   },
 
   {
-    name: "X",
+    label: "X",
+    name: "x",
     icon: <FaSquareXTwitter size={20} />,
   },
   {
-    name: "LinkedIn",
+    label: "Linkedin",
+    name: "linkedin",
     icon: <FaLinkedinIn size={20} />,
   },
   {
-    name: "Youtube",
+    label: "Youtube",
+    name: "youtube",
     icon: <FaYoutube size={20} />,
   },
   {
-    name: "Instagram",
+    label: "Instagram",
+    name: "instagram",
     icon: <FaInstagram size={20} />,
   },
   {
-    name: "Facebook",
+    label: "Facebook",
+    name: "facebook",
     icon: <FaFacebook size={20} />,
   },
   {
-    name: "Twitch",
+    label: "Twitch",
+    name: "twitch",
     icon: <FaTwitch size={20} />,
   },
   {
-    name: "Dev.to",
+    label: "Devto",
+    name: "devto",
     icon: <BiLogoDevTo size={20} />,
   },
   {
-    name: "Codewars",
+    label: "Codewars",
+    name: "codewars",
     icon: <SiCodewars size={20} />,
   },
   {
-    name: "Codepen",
+    label: "Codepen",
+    name: "codepen",
     icon: <FaCodepen size={20} />,
   },
   {
-    name: "freeCodeCamp",
+    label: "Freecodecamp",
+    name: "freecodecamp",
     icon: <FaFreeCodeCamp size={20} />,
   },
   {
-    name: "Frontend Mentor",
+    label: "Frontendmentor",
+    name: "frontendmentor",
     icon: <SiFrontendmentor size={20} />,
   },
   {
-    name: "Gitlab",
+    label: "Gitlab",
+    name: "gitlab",
     icon: <FaGitlab size={20} />,
   },
   {
-    name: "Hashnode",
+    label: "Hashnode",
+    name: "hashnode",
     icon: <FaHashnode size={20} />,
   },
   {
-    name: "Stack Overflow",
+    label: "Stackoverflow",
+    name: "stackoverflow",
     icon: <FaStackOverflow size={20} />,
   },
 ];
 
-export const platformPreview = {
+export const platformPreview: PlatformPreview = {
   github: {
     name: "Github",
     icon: <PiGithubLogoFill size={20} />,
@@ -89,7 +109,7 @@ export const platformPreview = {
     icon: <FaSquareXTwitter size={20} />,
   },
   linkedin: {
-    name: "LinkedIn",
+    name: "Linkedin",
     icon: <FaLinkedinIn size={20} />,
   },
   youtube: {
@@ -110,7 +130,7 @@ export const platformPreview = {
     icon: <FaTwitch size={20} />,
   },
   devto: {
-    name: "Dev.to",
+    name: "Devto",
     icon: <BiLogoDevTo size={20} />,
   },
 
@@ -123,11 +143,11 @@ export const platformPreview = {
     icon: <FaCodepen size={20} />,
   },
   freecodecamp: {
-    name: "freeCodeCamp",
+    name: "Freecodecamp",
     icon: <FaFreeCodeCamp size={20} />,
   },
   frontendmentor: {
-    name: "Frontend Mentor",
+    name: "Frontendmentor",
     icon: <SiFrontendmentor color="black" size={20} />,
   },
   gitlab: {
@@ -139,7 +159,133 @@ export const platformPreview = {
     icon: <FaHashnode size={20} />,
   },
   stackoverflow: {
-    name: "Stack Overflow",
+    name: "Stackoverflow",
     icon: <FaStackOverflow size={20} />,
+  },
+};
+
+export const validationByPlatform: ValidationByPlatform = {
+  github: {
+    validate: (val: string) => {
+      return val.match(/^(https?:\/\/)?(www\.)?github.com\/[a-zA-Z0-9-]+\/?$/);
+    },
+    message: "Invalid Github URL",
+    example: "https://github.com/elonmusk/",
+  },
+  x: {
+    validate: (val: string) => {
+      return val.match(/^(https?:\/\/)?(www\.)?twitter.com\/[a-zA-Z0-9_]+\/?$/);
+    },
+    message: "Invalid Twitter URL",
+    example: "https://twitter.com/elonmusk/",
+  },
+  linkedin: {
+    validate: (val: string) => {
+      return val.match(
+        /^(https?:\/\/)?(www\.)?linkedin.com\/in\/[a-zA-Z0-9-]+\/?$/
+      );
+    },
+    message: "Invalid LinkedIn URL",
+    example: "https://linkedin.com/in/elonmusk/",
+  },
+  youtube: {
+    validate: (val: string) => {
+      return val.match(
+        /^(https?:\/\/)?(www\.)?youtube.com\/@[a-zA-Z0-9-]+\/?$/
+      );
+    },
+    message: "Invalid Youtube URL",
+    example: "https://youtube.com/@elonmusk",
+  },
+  instagram: {
+    validate: (val: string) => {
+      return val.match(
+        /^(https?:\/\/)?(www\.)?instagram.com\/[a-zA-Z0-9_]+\/?$/
+      );
+    },
+    message: "Invalid Instagram URL",
+    example: "https://instagram.com/elonmusk/",
+  },
+  facebook: {
+    validate: (val: string) => {
+      return val.match(
+        /^(https?:\/\/)?(www\.)?facebook.com\/[a-zA-Z0-9.]+\/?$/
+      );
+    },
+    message: "Invalid Facebook URL",
+    example: "https://www.facebook.com/elonmusk/",
+  },
+  twitch: {
+    validate: (val: string) => {
+      return val.match(/^(https?:\/\/)?(www\.)?twitch.tv\/[a-zA-Z0-9_]+\/?$/);
+    },
+    message: "Invalid Twitch URL",
+    example: "https://www.twitch.tv/elonmusk/",
+  },
+  devto: {
+    validate: (val: string) => {
+      return val.match(/^(https?:\/\/)?(www\.)?dev.to\/[a-zA-Z0-9_]+\/?$/);
+    },
+    message: "Invalid Dev.to URL",
+    example: "https://dev.to/elonmusk/",
+  },
+  codewars: {
+    validate: (val: string) => {
+      return val.match(
+        /^(https?:\/\/)?(www\.)?codewars.com\/users\/[a-zA-Z0-9_]+\/?$/
+      );
+    },
+    message: "Invalid Codewars URL",
+    example: "https://www.codewars.com/users/elonmusk/",
+  },
+  codepen: {
+    validate: (val: string) => {
+      return val.match(/^(https?:\/\/)?(www\.)?codepen.io\/[a-zA-Z0-9_]+\/?$/);
+    },
+    message: "Invalid Codepen URL",
+    example: "https://codepen.io/elonmusk/",
+  },
+  freecodecamp: {
+    validate: (val: string) => {
+      return val.match(
+        /^(https?:\/\/)?(www\.)?freecodecamp.org\/[a-zA-Z0-9_]+\/?$/
+      );
+    },
+    message: "Invalid freeCodeCamp URL",
+    example: "https://www.freecodecamp.org/elonmusk/",
+  },
+  frontendmentor: {
+    validate: (val: string) => {
+      return val.match(
+        /^(https?:\/\/)?(www\.)?frontendmentor.io\/profile\/[a-zA-Z0-9_]+\/?$/
+      );
+    },
+    message: "Invalid Frontend Mentor URL",
+    example: "https://www.frontendmentor.io/profile/elonmusk/",
+  },
+  gitlab: {
+    message: "Invalid Gitlab URL",
+    validate: (val: string) => {
+      return val.match(/^(https?:\/\/)?(www\.)?gitlab.com\/[a-zA-Z0-9_]+\/?$/);
+    },
+    example: "https://gitlab.com/elonmusk/",
+  },
+  hashnode: {
+    validate: (val: string) => {
+      return val.match(
+        /^(https?:\/\/)?(www\.)?hashnode.com\/[a-zA-Z0-9_]+\/?$/
+      );
+    },
+    message: "Invalid Hashnode URL",
+    example: "https://hashnode.com/elonmusk/",
+  },
+  stackoverflow: {
+    validate: (val: string) => {
+      return val.match(
+        /^(https?:\/\/)?(www\.)?stackoverflow.com\/users\/[a-zA-Z0-9_]+\/?$/
+      );
+    },
+    message: "Invalid Stackoverflow URL",
+    example: "https://stackoverflow.com/users/elonmusk/",
   },
 };

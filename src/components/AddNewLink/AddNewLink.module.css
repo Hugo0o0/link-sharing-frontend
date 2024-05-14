@@ -1,0 +1,19 @@
+.new-link-head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.new-link-head__left {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-weight: bold;
+  font-size: 1.6rem;
+  color: var(--clr-smokey-grey);
+}
+
+.new-link__input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}

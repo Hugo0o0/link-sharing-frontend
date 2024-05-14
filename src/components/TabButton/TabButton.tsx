@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 interface TabButtonProps {
   active?: boolean;
 }
 
-const TabButton = styled.button<TabButtonProps>`
+const TabButton = styled(Link)<TabButtonProps>`
   border-radius: 8px;
   padding: 1.1rem 2.7rem;
   display: flex;
@@ -17,6 +18,7 @@ const TabButton = styled.button<TabButtonProps>`
     props.active ? "var(--clr-blue-chalk)" : "transparent"};
   color: ${(props) =>
     props.active ? "var(--clr-primary)" : "var(--clr-smokey-grey)"};
+  transition: all 0.3s;
 
   &:hover * {
     color: var(--clr-primary);

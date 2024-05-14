@@ -73,8 +73,6 @@
   }
 }
 @media only screen and (max-width: 23.4375em) {
-  .auth {
-  }
   .form {
     min-width: auto;
   }

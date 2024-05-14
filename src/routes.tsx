@@ -3,6 +3,8 @@ import Private from "./pages/Private/Private";
 import Layout from "./components/Layout/Layout";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
+import Links from "./pages/Links/Links";
+import Profile from "./pages/Profile/Profile";
 
 const routes = createBrowserRouter([
   {
@@ -13,11 +15,11 @@ const routes = createBrowserRouter([
         children: [
           {
             path: "/links",
-            element: <p>Links</p>,
+            element: <Links />,
           },
           {
             path: "/profile",
-            element: <p>Profile</p>,
+            element: <Profile />,
           },
         ],
       },

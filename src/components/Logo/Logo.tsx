@@ -1,8 +1,9 @@
 import React, { FC } from "react";
 interface LogoProps {
   size?: "l" | "s";
+  className?: string;
 }
-const Logo: FC<LogoProps> = ({ size }) => {
+const Logo: FC<LogoProps> = ({ size, className }) => {
   return size === "l" ? (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -10,6 +11,7 @@ const Logo: FC<LogoProps> = ({ size }) => {
       height="40"
       fill="none"
       viewBox="0 0 183 40"
+      className={className}
     >
       <path
         fill="#633CFF"
@@ -33,6 +35,7 @@ const Logo: FC<LogoProps> = ({ size }) => {
       height="32"
       fill="none"
       viewBox="0 0 32 32"
+      className={className}
     >
       <path
         fill="#633CFF"
