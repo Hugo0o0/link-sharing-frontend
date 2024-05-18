@@ -1,11 +1,12 @@
 import { FC } from "react";
-import { platformPreview } from "../../constants";
-import styles from "./PlatformPreview.module.css";
 import { BiRightArrowAlt } from "react-icons/bi";
-import { Text } from "../UI";
+import { Text } from "components/UI";
+import { PlatformName } from "types/types";
+import { platformPreview } from "constants/constants";
+import styles from "./PlatformPreview.module.css";
 
 interface PlatformPreviewProps {
-  platform: keyof typeof platformPreview;
+  platform: PlatformName;
 }
 const PlatformPreview: FC<PlatformPreviewProps> = ({ platform }) => {
   const isFrontendMentor = platform === "frontendmentor";

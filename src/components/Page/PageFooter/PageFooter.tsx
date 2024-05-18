@@ -1,6 +1,6 @@
-import { Button } from "../../UI";
+import { FC } from "react";
+import { Button } from "components/UI";
 import styles from "./PageFooter.module.css";
-import { FC, PropsWithChildren } from "react";
 
 const PageFooter: FC<React.ButtonHTMLAttributes<HTMLButtonElement>> = ({
   ...props

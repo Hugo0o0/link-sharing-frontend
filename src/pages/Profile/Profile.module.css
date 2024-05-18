@@ -1,0 +1,24 @@
+.profile {
+}
+
+.profile__picture {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.profile__picture:p {
+  flex-basis: 24rem;
+}
+
+.profile__form {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+@media only screen and (max-width: 48em) {
+  .profile__picture {
+    flex-direction: column;
+  }
+}

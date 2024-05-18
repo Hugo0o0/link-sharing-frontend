@@ -1,7 +1,7 @@
 .image-upload {
   display: flex;
   align-items: center;
-  gap: 3.2rem;
+  gap: 2.4rem;
 }
 .image-upload__button {
   display: flex;
@@ -9,8 +9,10 @@
   align-items: center;
   justify-content: center;
   gap: 0.8rem;
-  width: 19.3rem;
-  height: 19.3rem;
+  min-width: 19.3rem;
+  min-height: 19.3rem;
+  max-width: 19.3rem;
+  max-height: 19.3rem;
   border-radius: 12px;
   color: var(--clr-primary);
   background-color: var(--clr-blue-chalk);
@@ -18,4 +20,11 @@
 }
 .image-upload__button-with-image {
   color: var(--clr-white);
+}
+
+@media only screen and (max-width: 48em) {
+  .image-upload {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }

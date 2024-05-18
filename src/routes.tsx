@@ -1,10 +1,11 @@
+import App from "App";
+import Layout from "components/Layout/Layout";
+import Links from "pages/Links/Links";
+import Login from "pages/Login/Login";
+import Private from "pages/Private/Private";
+import Profile from "pages/Profile/Profile";
+import Register from "pages/Register/Register";
 import { Navigate, createBrowserRouter } from "react-router-dom";
-import Private from "./pages/Private/Private";
-import Layout from "./components/Layout/Layout";
-import Login from "./pages/Login/Login";
-import Register from "./pages/Register/Register";
-import Links from "./pages/Links/Links";
-import Profile from "./pages/Profile/Profile";
 
 const routes = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const routes = createBrowserRouter([
   {
     path: "/preview",
     element: <p>Preview</p>,
+  },
+  {
+    path: "/test",
+    element: <App />,
   },
   {
     path: "*",

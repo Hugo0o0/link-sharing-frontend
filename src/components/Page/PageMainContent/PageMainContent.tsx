@@ -1,8 +1,6 @@
-import { FC, PropsWithChildren, forwardRef } from "react";
-import styles from "./PageMainContent.module.css";
+import { PropsWithChildren, forwardRef } from "react";
 import { motion } from "framer-motion";
-import { useSortable } from "@dnd-kit/sortable";
-import { CSS } from "@dnd-kit/utilities";
+import styles from "./PageMainContent.module.css";
 
 const PageMainContent = motion(
   forwardRef<HTMLDivElement, PropsWithChildren>(({ children }, ref) => {

@@ -27,6 +27,7 @@ const SelectButton: FC<SelectButtonProps> = ({ children, ...props }) => {
       onClick={() => {
         toggle();
       }}
+      type="button"
       className={styles["select-button"]}
     >
       {children}

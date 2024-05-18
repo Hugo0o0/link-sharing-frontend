@@ -7,6 +7,17 @@ export enum ColorToHex {
   "dark-grey" = "var(--clr-dark)",
   "danger" = "var(--clr-danger)",
 }
+
+export enum LinkPageDescription {
+  title = "Customize your links",
+  description = "Add/edit/remove links below and then share all your profiles with the world!",
+}
+
+export enum ProfilePageDescription {
+  title = "Profile Details",
+  description = "Add your details to create a personal touch to your profile.",
+}
+
 export type Color = keyof typeof ColorToHex;
 export type PlatformName =
   | "github"
@@ -45,3 +56,8 @@ export type ValidationByPlatform = {
     message: string;
   };
 };
+export interface Link {
+  platform: PlatformName;
+  url: string;
+  id: number;
+}

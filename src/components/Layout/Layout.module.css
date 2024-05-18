@@ -2,33 +2,3 @@
   display: grid;
   gap: 2.4rem;
 }
-.main {
-  display: grid;
-  grid-template-columns: 40% 1fr;
-  gap: 2.4rem;
-  padding: 2.4rem;
-}
-
-.main__phone {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 12px;
-  padding: 2.4rem;
-  height: 100%;
-  background-color: var(--clr-white);
-}
-
-.main > * {
-  border-radius: 12px;
-  background-color: var(--clr-white);
-}
-
-@media only screen and (max-width: 768px) {
-  .main {
-    grid-template-columns: 1fr;
-  }
-  .main__phone {
-    display: none;
-  }
-}

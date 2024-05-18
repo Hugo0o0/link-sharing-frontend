@@ -1,6 +1,6 @@
+import IllustrationEmpty from "components/IllustrationEmpty/IllustrationEmpty";
 import styles from "./NoLinksFound.module.css";
-import IllustrationEmpty from "../IllustrationEmpty/IllustrationEmpty";
-import { Heading, Text } from "../UI";
+import { Heading, Text } from "components/UI";
 
 const NoLinksFound = () => {
   return (

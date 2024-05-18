@@ -1,0 +1,34 @@
+.page {
+  display: grid;
+  grid-template-columns: 40% 1fr;
+  gap: 2.4rem;
+  padding: 2.4rem;
+  position: relative;
+}
+.page__phone {
+  display: flex;
+  justify-content: center;
+  padding: 2.4rem;
+  height: max-content;
+  background-color: var(--clr-white);
+  position: sticky;
+  bottom: 3rem;
+}
+.page > * {
+  border-radius: 12px;
+  background-color: var(--clr-white);
+}
+.page__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 48em) {
+  .page {
+    grid-template-columns: 1fr;
+  }
+  .page__phone {
+    display: none;
+  }
+}

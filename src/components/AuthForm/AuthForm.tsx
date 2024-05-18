@@ -1,46 +1,16 @@
 import { FC } from "react";
-import styles from "./AuthForm.module.css";
 import { useFormik } from "formik";
-import { loginSchema, registerSchema } from "../../schemas/authSchema";
-import { Button, FormInput, Heading, Text } from "../UI";
-import Logo from "../Logo/Logo";
 import { HiOutlineMail } from "react-icons/hi";
 import { IoIosLock } from "react-icons/io";
 import { Link } from "react-router-dom";
+import Logo from "components/Logo/Logo";
+import { Button, FormInput, Heading, Text } from "components/UI";
+import { authFormConfig } from "constants/constants";
+import styles from "./AuthForm.module.css";
 
 interface AuthFormProps {
   type: "login" | "register";
 }
-
-const authFormConfig = {
-  login: {
-    heading: "Login",
-    headingText: "Add your details below to get back into the app",
-    emailLabel: "Email address",
-    emailPlaceholder: "e.g. alex@email.com",
-    passwordLabel: "Password",
-    passwordPlaceholder: "Enter your password",
-    buttonText: "Login",
-    footerText: "Don't have an account?",
-    footerLinkText: "Create account",
-    footerLink: "/register",
-    schema: loginSchema,
-  },
-
-  register: {
-    heading: "Create Account",
-    headingText: "Let’s get you started sharing your links!",
-    emailLabel: "Email address",
-    emailPlaceholder: "e.g. alex@email.com",
-    passwordLabel: "Create Password",
-    passwordPlaceholder: "At least 8 characters",
-    buttonText: "Create new account",
-    footerText: "Already have an account?",
-    footerLinkText: "Login",
-    footerLink: "/login",
-    schema: registerSchema,
-  },
-};
 
 const AuthForm: FC<AuthFormProps> = ({ type }) => {
   const { values, handleBlur, handleChange, errors, handleSubmit } = useFormik({

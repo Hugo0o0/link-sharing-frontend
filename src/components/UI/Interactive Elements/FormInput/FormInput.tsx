@@ -22,6 +22,8 @@ const FormInput: FC<FormInputProps> = ({ icon, error, ...props }) => {
         {...props}
       />
       <Text
+        key={error}
+        animate={{ opacity: [0, 1] }}
         size="s"
         color={error ? "danger" : "black"}
         className={styles["input-error"]}

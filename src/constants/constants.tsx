@@ -18,7 +18,8 @@ import {
   PlatformPreview,
   PlatformSelect,
   ValidationByPlatform,
-} from "./@types/types";
+} from "types/types";
+import { loginSchema, registerSchema } from "schemas/authSchema";
 
 export const platforms: PlatformSelect[] = [
   {
@@ -287,5 +288,35 @@ export const validationByPlatform: ValidationByPlatform = {
     },
     message: "Invalid Stackoverflow URL",
     example: "https://stackoverflow.com/users/elonmusk/",
+  },
+};
+
+export const authFormConfig = {
+  login: {
+    heading: "Login",
+    headingText: "Add your details below to get back into the app",
+    emailLabel: "Email address",
+    emailPlaceholder: "e.g. alex@email.com",
+    passwordLabel: "Password",
+    passwordPlaceholder: "Enter your password",
+    buttonText: "Login",
+    footerText: "Don't have an account?",
+    footerLinkText: "Create account",
+    footerLink: "/register",
+    schema: loginSchema,
+  },
+
+  register: {
+    heading: "Create Account",
+    headingText: "Let’s get you started sharing your links!",
+    emailLabel: "Email address",
+    emailPlaceholder: "e.g. alex@email.com",
+    passwordLabel: "Create Password",
+    passwordPlaceholder: "At least 8 characters",
+    buttonText: "Create new account",
+    footerText: "Already have an account?",
+    footerLinkText: "Login",
+    footerLink: "/login",
+    schema: registerSchema,
   },
 };

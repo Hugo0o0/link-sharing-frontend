@@ -1,5 +1,5 @@
-import React, { FC, PropsWithChildren } from "react";
-import { Heading, Text } from "../UI";
+import { Heading, Text } from "components/UI";
+import { FC } from "react";
 
 interface PageDescriptionProps {
   title: string;

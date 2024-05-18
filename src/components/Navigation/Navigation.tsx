@@ -1,11 +1,11 @@
 import { useLocation } from "react-router-dom";
-import Logo from "../Logo/Logo";
-import TabButton from "../TabButton/TabButton";
-import { Button } from "../UI";
-import styles from "./Navigation.module.css";
 import { FaLink } from "react-icons/fa";
 import { FaRegCircleUser } from "react-icons/fa6";
 import { LuEye } from "react-icons/lu";
+import Logo from "components/Logo/Logo";
+import TabButton from "components/TabButton/TabButton";
+import { Button } from "components/UI";
+import styles from "./Navigation.module.css";
 
 const Navigation = () => {
   const { pathname } = useLocation();

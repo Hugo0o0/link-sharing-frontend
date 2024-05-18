@@ -1,11 +1,11 @@
-import { FC, useState } from "react";
-import { Heading, Text } from "../UI";
+import { FC, useEffect, useState } from "react";
 import { IoImagesOutline } from "react-icons/io5";
+import { Heading, Text } from "components/UI";
 import styles from "./ImageUpload.module.css";
 
 interface ImageUploadProps {
   message?: string;
-  image?: string;
+  image?: string | null;
 }
 
 interface ButtonWithImageProps
@@ -74,10 +74,15 @@ const ButtonWithNoImage: FC<React.InputHTMLAttributes<HTMLInputElement>> = ({
 const ImageUpload: FC<ImageUploadProps> = ({ message, image }) => {
   const [fileImage, setFileImage] = useState<any>(image);
   const handleChooseImage = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFileImage(null);
     if (e.target.files && e.target.files[0]) {
       setFileImage(URL.createObjectURL(e.target.files[0]));
     }
   };
+
+  useEffect(() => {
+    setFileImage(image);
+  }, [image]);
 
   return (
     <div data-testid="image-upload" className={styles["image-upload"]}>
